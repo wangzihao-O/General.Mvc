@@ -34,7 +34,7 @@ namespace General.Mvc
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //影响Session的使用11 先提交本地不推送
+            //影响Session的使用1111
             
             //services.Configure<CookiePolicyOptions>(options =>
             //{
