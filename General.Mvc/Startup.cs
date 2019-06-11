@@ -56,7 +56,7 @@ namespace General.Mvc
                 o.DefaultChallengeScheme = CookieAdminAuthInfo.AuthenticationScheme;
             }).AddCookie(CookieAdminAuthInfo.AuthenticationScheme, o =>
             {
-                o.LoginPath = "/Admin/Login";
+                o.LoginPath = "/Admin/Login";  
             });
 
             

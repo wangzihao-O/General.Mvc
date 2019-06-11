@@ -47,6 +47,12 @@ namespace General.Mvc.Areas.Admin.Controllers
             string a = HttpContext.Session.GetString(R_KEY);
             return View(loginModel);
         }
+
+        /// <summary>
+        /// 登录验证
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("login",Name ="adminLogin1")]
         public IActionResult LoginIndex(LoginModel model)
