@@ -7,7 +7,6 @@ using General.Framework.Controllers.Admin;
 using General.Framework.Security.Admin;
 using General.Services.SysUser;
 using Microsoft.AspNetCore.Http;
-//using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -32,8 +31,9 @@ namespace General.Mvc.Areas.Admin.Controllers
             this._authenticationService = authenticationService;
             this._memoryCache = memoryCache;
         }
+
         /// <summary>
-        /// 
+        /// 登录视图
         /// </summary>
         /// <returns></returns>
         [Route("login",Name ="adminLogin")]
@@ -43,13 +43,12 @@ namespace General.Mvc.Areas.Admin.Controllers
             string sessionId = HttpContext.Session.Id;
             HttpContext.Session.SetString(R_KEY,r);
             LoginModel loginModel = new LoginModel() { R = r };
-
             string a = HttpContext.Session.GetString(R_KEY);
             return View(loginModel);
         }
 
         /// <summary>
-        /// 登录验证
+        /// Post提交登录
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>

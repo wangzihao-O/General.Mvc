@@ -39,6 +39,11 @@ namespace General.Framework.Security.Admin
             return _sysUserService.getLogged(token??null);
         }
 
+        /// <summary>
+        /// 登入(写入Cookie)
+        /// </summary>
+        /// <param name="token"></param>
+        /// <param name="name"></param>
         public void signIn(string token, string name)
         {
             ClaimsIdentity claimsIdentity = new ClaimsIdentity("Forms");
@@ -49,7 +54,7 @@ namespace General.Framework.Security.Admin
         }
 
         /// <summary>
-        /// 退出登录
+        /// 退出登录(清除Cookie)
         /// </summary>
         public void signOut()
         {
