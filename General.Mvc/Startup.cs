@@ -59,7 +59,7 @@ namespace General.Mvc
                 o.LoginPath = "/Admin/Login";  
             });
 
-            
+            //测试拉取
 
             //单例注入
             //services.AddScoped<ICategoryService, CategoryService>();
